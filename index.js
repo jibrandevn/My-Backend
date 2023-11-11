@@ -1,11 +1,9 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
-import dotenv from "dotenv";
 import { sendEmail } from "./sendEmail.js";
 
 const PORT = 5005;
-dotenv.config();
+
 const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
